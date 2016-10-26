@@ -34,6 +34,15 @@ class TestingConfig(BaseConfig):
     DEBUG_TB_ENABLED = False
     PRESERVE_CONTEXT_ON_EXCEPTION = False
 
+class MysqlConfig(BaseConfig):
+    """Testing configuration."""
+    DEBUG = True
+    TESTING = True
+    BCRYPT_LOG_ROUNDS = 4
+    WTF_CSRF_ENABLED = False
+    SQLALCHEMY_DATABASE_URI = 'Mysql:///'
+    DEBUG_TB_ENABLED = False
+    PRESERVE_CONTEXT_ON_EXCEPTION = False
 
 class ProductionConfig(BaseConfig):
     """Production configuration."""
